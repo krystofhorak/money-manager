@@ -15,4 +15,15 @@ transactionRouter.get('/', (_, res) => {
   res.send(exampleTransactions);
 });
 
+transactionRouter.post('/', (req, res) => {
+  const { amount, receiver, date } = req.body;
+  exampleTransactions.push({
+    transaction_id: 0,
+    amount,
+    receiver,
+    date,
+  });
+  res.json("Good!");
+});
+
 export default transactionRouter;
