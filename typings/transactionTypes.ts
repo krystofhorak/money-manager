@@ -1,7 +1,7 @@
 export type Transaction = {
   transaction_id: number;
   amount: number;
-  receiver: string;
-  sender: string;
+  receiver: string | null;
+  sender: string | null;
   date: string;
 };
